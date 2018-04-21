@@ -60,7 +60,7 @@ func newsAggHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	p := NewsAggPage{Title: "Amazing news aggregator", News: news_map}
+	p := NewsAggPage{Title: "News aggregator", News: news_map}
 	t, _ := template.ParseFiles("newsaggtemplate.html")
 	t.Execute(w, p)
 }
